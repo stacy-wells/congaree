@@ -1,7 +1,66 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+parks = [
+  {name: "Acadia", state: "ME", est: 1919, acres: 49057.36},
+  {name: "Arches", state: "UT", est: 1971, acres: 1585718},
+  {name: "Badlands", state: "SD", est: 1978, acres: 996263},
+  {name: "Big Bend", state: "TX", est: 1944, acres: 801163.21},
+  {name: "Biscayne", state: "FL", est: 1980, acres: 172971.11},
+  {name: "Black Canyon of the Gunnison", state: "CO", est: 1999, acres: 30749.75},
+  {name: "Bryce Canyon", state: "UT", est: 1928, acres: 35835.08},
+  {name: "Canyonlands", state: "UT", est: 1964, acres: 337597.83},
+  {name: "Capitol Reef", state: "UT", est: 1971, acres: 241904.26},
+  {name: "Carlsbad Caverns", state: "NM", est: 1930, acres: 46766.45},
+  {name: "Channel Islands", state: "CA", est: 1980, acres: 249561.00},
+  {name: "Congaree", state: "SC", est: 2003, acres: 26275.82},
+  {name: "Crater Lake", state: "OR", est: 1902, acres: 183224.05},
+  {name: "Cuyahoga Valley", state: "OH", est: 2000, acres: 32572.35},
+  {name: "Death Valley", state: "CA & NV", est: 1994, acres: 3373063.14},
+  {name: "Denali", state: "AK", est: 1917, acres: 4740911.16},
+  {name: "Dry Tortugas", state: "FL", est: 1992, acres: 64701.22},
+  {name: "Everglades", state: "FL", est: 1934, acres: 1508968.1},
+  {name: "Gates of the Arctic", state: "AK", est: 1980, acres: 7523897.45},
+  {name: "Glacier Bay", state: "MT", est: 1910, acres: 1013128.94},
+  {name: "Glacier", state: "AK", est: 1980, acres: 3223383.43},
+  {name: "Grand Canyon", state: "AZ", est: 1919, acres: 1201647.03},
+  {name: "Grand Teton", state: "WY", est: 1929, acres: 310043.96},
+  {name: "Great Basin", state: "NV", est: 1986, acres: 77180.00},
+  {name: "Great Sand Dunes", state: "CO", est: 2004, acres: 107341.87},
+  {name: "Great Smoky Mountains", state: "TN & NC", est: 1934, acres: 522426.88},
+  {name: "Guadalupe Mountains", state: "TX", est: 1996, acres: 86367.10},
+  {name: "Haleakala", state: "HI", est: 1916, acres: 33264.62},
+  {name: "Hawaii Volcanoes", state: "HI", est: 1916, acres: 323431.38},
+  {name: "Hot Springs", state: "AR", est: 1921, acres: 5549.10},
+  {name: "Isle Royale", state: "MI", est: 1940, acres: 571790.11},
+  {name: "Joshua Tree", state: "CA", est: 1994, acres: 790635.74},
+  {name: "Katmai", state: "AK", est: 1980, acres: 3674529.33},
+  {name: "Kenai Fjords", state: "AK", est: 1980, acres: 669983.65},
+  {name: "Kings Canyon", state: "CA", est: 1940, acres: 461901.20},
+  {name: "Kobuk Valley", state: "AK", est: 1980, acres: 1750716.16},
+  {name: "Lake Clark", state: "AK", est: 1980, acres: 2619816.49},
+  {name: "Lassen Volcanic", state: "CA", est: 1916, acres: 106589.02},
+  {name: "Mammoth Cave", state: "CO", est: 1941, acres: 52830.19},
+  {name: "Mesa Verde", state: "CO", est: 1906, acres: 52485.17},
+  {name: "Mount Rainier", state: "WA", est: 1899, acres: 236381.64},
+  {name: "National Park of American Samoa", state: "AS", est: 1988, acres: 8256.67},
+  {name: "North Cascades", state: "WA", est: 1968, acres: 504780.94},
+  {name: "Olympic", state: "WA", est: 1938, acres: 922650.10},
+  {name: "Petrified Forest", state: "AZ", est: 1962, acres: 221415.77},
+  {name: "Pinnacles", state: "CA", est: 2013, acres: 26685.73},
+  {name: "Redwood", state: "CA", est: 1968, acres: 138999.37},
+  {name: "Rocky Mountain", state: "CO", est: 1915, acres: 265795.20},
+  {name: "Saguaro", state: "AZ", est: 1994, acres: 91715.72},
+  {name: "Sequoia", state: "CA", est: 1890, acres: 404062.63},
+  {name: "Shenandoah", state: "VA", est: 1935, acres: 199195.27},
+  {name: "Theodore Roosevelt", state: "ND", est: 1978, acres: 70446.89},
+  {name: "Virgin Islands", state: "VI", est: 1956, acres: 14948.46},
+  {name: "Voyageurs", state: "MN", est: 1971, acres: 218200.15},
+  {name: "Wind Cave", state: "SD", est: 1903, acres: 33970.84},
+  {name: "Wrangell-St. Elias", state: "AK", est: 1980, acres: 8323146.48},
+  {name: "Yellowstone", state: "WY & MT & ID", est: 1872, acres: 2219790.71},
+  {name: "Yosemite", state: "CA", est: 1890, acres: 761747.50},
+  {name: "Zion", state: "UT", est: 1919, acres: 147237.02}
+]
+
+parks.each do |park|
+  Park.create!(name: park[:name], state: park[:state],
+               est: Date.new(park[:est]), acres: park[:acres])
+end

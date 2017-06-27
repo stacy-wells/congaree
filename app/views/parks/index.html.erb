@@ -1,0 +1,7 @@
+<%= line_chart charts_total_visits_path %>
+
+<% @parks.each do |park| %>
+  <a href="<%= park_path(park) %>"><%= park.name %></a>
+  <p><%= park.state %></p>
+  <hr>
+<% end %>

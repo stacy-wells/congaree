@@ -1,0 +1,10 @@
+<p><%= @park.name %></p>
+<p><%= @park.state %></p>
+<p><%= @park.est %></p>
+<p><%= @park.acres %></p>
+
+<br>
+<% @visitor_totals.each do |total| %>
+  <p><%= total.year %> : <%= total.visitors %></p>
+  <hr>
+<% end %>

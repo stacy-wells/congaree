@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root "parks#index"
+  resources :parks, only: [:index, :show]
+
+  namespace :charts do
+    get "total-visits"
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
