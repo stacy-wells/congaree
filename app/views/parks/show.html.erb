@@ -4,6 +4,10 @@
 <p><%= @park.acres %></p>
 
 <br>
+
+<%= line_chart charts_park_annual_visitors_path(id: @park.id) %>
+
+<br>
 <% @visitor_totals.each do |total| %>
   <p><%= total.year %> : <%= total.visitors %></p>
   <hr>
