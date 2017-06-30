@@ -8,9 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="app__wrapper">
 
-<%= yield %>
+    <main class="app__main">
+      <%= yield %>
+    </main>
 
+    <div class="app__footer">
+    </div>
+
+  </div>
 </body>
 
 </html>
