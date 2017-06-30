@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get "park-annual-visitors"
     get "acerage-by-park"
     get "visitors-by-park"
+    get "parks-per-state"
   end
 end

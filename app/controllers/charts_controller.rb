@@ -34,4 +34,18 @@ class ChartsController < ApplicationController
 
     render json: total_visitors_by_park.to_json
   end
+
+  def parks_per_state
+    parks_per_state = {}
+
+    Park.all.each do |park|
+      if parks_per_state[park.state]
+        parks_per_state[park.state] += 1
+      else
+        parks_per_state[park.state] = 1
+      end
+    end
+
+    render json: parks_per_state.to_json
+  end
 end
