@@ -1,0 +1,12 @@
+.intro {
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
+    p::first-line {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}

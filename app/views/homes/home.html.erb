@@ -1,0 +1,41 @@
+<div class="chart">
+  <div class="chart__geo">
+    <%= geo_chart charts_parks_per_state_path, width: "600px", height: "300px", library: {region: 'US', resolution: 'provinces'}, key: ENV['GOOGLE_API_KEY'] %>
+  </div>
+</div>
+
+<div class="intro">
+  <div class="intro__text">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis iaculis nisi nec efficitur. Praesent id nisl ultrices, interdum enim sed, malesuada sapien. Fusce sit amet erat vitae arcu aliquet consectetur. Aliquam id risus nibh. In eget volutpat justo. Aliquam eu semper eros. Vestibulum varius mauris nec laoreet maximus. Ut tempus auctor elementum. Vestibulum nibh arcu, vestibulum vitae felis sit amet, tempor pellentesque leo. Nullam in dolor eget neque feugiat rutrum. Duis sed tincidunt ex, eget vestibulum enim. Sed interdum enim ut sem viverra, pulvinar posuere diam pretium. Duis venenatis dolor ut sagittis convallis. Nullam laoreet, diam nec iaculis mollis, sapien risus iaculis libero, in consectetur nibh ligula eget justo. Ut ornare leo eu vestibulum vehicula.
+    </p>
+  </div>
+</div>
+
+<div class="chart">
+  <div class="chart__line">
+    <%= line_chart charts_total_visits_path, width: "600px", height: "300px", xtitle: "Year", ytitle: "Total Visitors", library: { baseline: 2000} %>
+  </div>
+</div>
+
+<hr/>
+
+<div class="chart__group">
+  <div class="chart__pie">
+    <%= pie_chart charts_acerage_by_park_path, legend: false, donut: true %>
+  </div>
+  <div class="chart__callout">
+    <h2>9,192,202 <span>ACRES</span></h2>
+    <h2><span>IN</span> 59 <span>PARKS</span></h2>
+  </div>
+</div>
+
+<div class="chart__group">
+  <div class="chart__pie">
+    <%= pie_chart charts_visitors_by_park_path, legend: false, donut: true %>
+  </div>
+  <div class="chart__callout">
+    <h2>99,122,523 <span>VISITORS</span></h2>
+    <h2><span>IN</span> 2016</h2>
+  </div>
+</div>

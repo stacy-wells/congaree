@@ -1,6 +1,6 @@
 class ChartsController < ApplicationController
   def total_visits
-    year_range = 1979..2016
+    year_range = 1985..2016
     totals_by_year = {}
 
     year_range.each do |year|
@@ -32,7 +32,7 @@ class ChartsController < ApplicationController
       total_visitors_by_park[park.name] = visitors
     end
 
-    render json: total_visitors_by_park.to_json
+    render json: total_visitors_by_park.sort.to_json
   end
 
   def parks_per_state

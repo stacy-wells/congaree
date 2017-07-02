@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "parks#index"
+  root "homes#home"
   resources :parks, only: [:index, :show]
 
   namespace :charts do

@@ -1,0 +1,26 @@
+.chart {
+  width: 100%;
+
+  &__geo {
+    margin: auto;
+    max-width: 600px;
+  }
+
+  &__line {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  &__callout {
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 35px;
+      margin: 0;
+    }
+
+    span {
+      color: #000050;
+      font-weight: 300;
+    }
+  }
+}

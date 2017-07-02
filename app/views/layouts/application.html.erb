@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Congaree</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,600" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
@@ -9,14 +10,19 @@
 </head>
 <body>
   <div class="app__wrapper">
-
+    <div class="header__wrapper">
+      <div class="header__text">
+        <h1 class="page-title">Parks</h1>
+        <h1 class="page-title">Report</h1>
+        <%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow") %>
+      </div>
+    </div>
     <main class="app__main">
       <%= yield %>
     </main>
-
-    <div class="app__footer">
-    </div>
-
+  </div>
+  
+  <div class="app__footer">
   </div>
 </body>
 

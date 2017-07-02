@@ -1,4 +1,29 @@
 .header {
-  height: 500px;
-  background-image: url(index_header.png);
+
+  &__wrapper {
+    background-color: #000050;
+    height: 350px;
+    width: 100%;
+
+    .compass-arrow {
+      position: absolute;
+      left: 226px;
+      top: 169px;
+      width: 75px;
+    }
+  }
+
+  &__text {
+    margin: auto;
+    padding-left: 300px;
+    padding-top: 100px;
+
+    .page-title {
+      color: white;
+      font-family: 'Oswald', sans-serif;
+      font-size: 75px;
+      margin: 0 0 -40px;
+      text-transform: uppercase;
+    }
+  }
 }
