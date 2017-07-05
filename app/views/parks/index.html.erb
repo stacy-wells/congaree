@@ -1,9 +1,11 @@
-<div class="header">
-<div>
-
-
-<% @parks.each do |park| %>
-  <a href="<%= park_path(park) %>"><%= park.name %></a>
-  <p><%= park.state %></p>
-  <hr>
-<% end %> -->
+<div class="index">
+  <div class="index__wrapper">
+    <% @parks.each do |park| %>
+      <div class="index__item">
+        <div class="index__item-photo"></div>
+        <a href="<%= park_path(park) %>"><%= park.name %></a>
+        <p><%= park.state %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

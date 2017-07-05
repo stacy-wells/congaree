@@ -40,7 +40,7 @@ parks = [
   {name: "Mammoth Cave", state: "CO", est: 1941, acres: 52830.19},
   {name: "Mesa Verde", state: "CO", est: 1906, acres: 52485.17},
   {name: "Mount Rainier", state: "WA", est: 1899, acres: 236381.64},
-  {name: "National Park of American Samoa", state: "AS", est: 1988, acres: 8256.67},
+  {name: "NP of American Samoa", state: "AS", est: 1988, acres: 8256.67},
   {name: "North Cascades", state: "WA", est: 1968, acres: 504780.94},
   {name: "Olympic", state: "WA", est: 1938, acres: 922650.10},
   {name: "Petrified Forest", state: "AZ", est: 1962, acres: 221415.77},

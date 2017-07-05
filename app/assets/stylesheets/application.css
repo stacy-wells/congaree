@@ -15,6 +15,7 @@
  */
 
 body {
+  background-color: #f9f9f9;
   margin: 0;
 }
 
@@ -23,9 +24,8 @@ body {
 }
 
 .app__main {
-  background-color: white;
   margin: auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .app__footer {

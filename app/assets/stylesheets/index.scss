@@ -1,0 +1,27 @@
+.index {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    align-self: center;
+    border: 1px solid gray;
+    margin: 10px;
+    width: 195px;
+
+    &-photo {
+      background-color: gray;
+      height: 195px;
+    }
+  }
+}

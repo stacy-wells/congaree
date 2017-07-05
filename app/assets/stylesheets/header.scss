@@ -1,7 +1,7 @@
 .header {
-
   &__wrapper {
-    background-color: #000050;
+    // background-color: #000050;
+    background-image: url("index_header_two.png");
     height: 350px;
     width: 100%;
 
@@ -14,16 +14,31 @@
   }
 
   &__text {
+    font-family: 'Oswald', sans-serif;
     margin: auto;
     padding-left: 300px;
     padding-top: 100px;
+    color: white;
 
     .page-title {
-      color: white;
-      font-family: 'Oswald', sans-serif;
       font-size: 75px;
       margin: 0 0 -40px;
       text-transform: uppercase;
     }
+
+    .page-subtitle {
+      font-size: 30px;
+      font-weight: 300;
+      font-variant: small-caps;
+      margin: 20px 0 0;
+    }
+
+    .page-subtitle-est {
+      font-size: 30px;
+      font-weight: 300;
+      font-variant: small-caps;
+      margin-top: 0;
+    }
+
   }
 }

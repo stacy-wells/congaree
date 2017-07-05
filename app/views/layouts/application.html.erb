@@ -10,10 +10,28 @@
 </head>
 <body>
   <div class="app__wrapper">
+    <nav>
+      <div class="nav__wrapper">
+        <div class="nav__wrapper-content">
+          <a class="logo"href="<%= root_path %>">PR<a>
+          <ul>
+            <li><a href="<%= parks_path %>">Parks |</a></li>
+            <li><a href="<%= parks_path %>">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="header__wrapper">
       <div class="header__text">
-        <h1 class="page-title">Parks</h1>
-        <h1 class="page-title">Report</h1>
+        <% if @park %>
+          <h1 class="page-title"><%= @park.name %></h1>
+          <h3 class="page-subtitle"><%= "#{@park.state}, #{@park.acres} acres" %></h3>
+          <h3 class="page-subtitle-est"><%= "est. #{@park.est.strftime('%Y')}"%></h3>
+        <% else %>
+          <h1 class="page-title">Parks</h1>
+          <h1 class="page-title">Report</h1>
+        <% end %>
+
         <%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow") %>
       </div>
     </div>
@@ -21,7 +39,7 @@
       <%= yield %>
     </main>
   </div>
-  
+
   <div class="app__footer">
   </div>
 </body>

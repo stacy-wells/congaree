@@ -1,14 +1,24 @@
-<p><%= @park.name %></p>
-<p><%= @park.state %></p>
-<p><%= @park.est %></p>
-<p><%= @park.acres %></p>
+<div class="park__wrapper">
+  <div class="intro">
+    <div class="intro__text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis iaculis nisi nec efficitur. Praesent id nisl ultrices, interdum enim sed, malesuada sapien. Fusce sit amet erat vitae arcu aliquet consectetur. Aliquam id risus nibh. In eget volutpat justo. Aliquam eu semper eros. Vestibulum varius mauris nec laoreet maximus. Ut tempus auctor elementum. Vestibulum nibh arcu, vestibulum vitae felis sit amet, tempor pellentesque leo. Nullam in dolor eget neque feugiat rutrum. Duis \
+      </p>
+    </div>
+  </div>
 
-<br>
 
-<%= line_chart charts_park_annual_visitors_path(id: @park.id) %>
+  <div class="chart">
+    <div class="chart__line">
+      <%= line_chart charts_park_annual_visitors_path(id: @park.id), width: "600px", height: "300px", xtitle: "Year", ytitle: "Total Visitors", library: { baseline: 2000} %>
+    </div>
+  </div>
 
-<br>
-<% @visitor_totals.each do |total| %>
-  <p><%= total.year %> : <%= total.visitors %></p>
-  <hr>
-<% end %>
+  <div class="intro">
+    <div class="intro__text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis iaculis nisi nec efficitur. Praesent id nisl ultrices, interdum enim sed, malesuada sapien. Fusce sit amet erat vitae arcu aliquet consectetur. Aliquam id risus nibh. In eget volutpat justo. Aliquam eu semper eros. Vestibulum varius mauris nec laoreet maximus. Ut tempus auctor elementum. Vestibulum nibh arcu, vestibulum vitae felis sit amet, tempor pellentesque leo. Nullam in dolor eget neque feugiat rutrum. Duis
+      </p>
+    </div>
+  </div>
+</div>

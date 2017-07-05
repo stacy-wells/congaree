@@ -1,6 +1,15 @@
-.intro {
+.card {
+  background-color: white;
+  margin: auto;
+  margin: 20px 0;
+  max-width: 1000px;
+  padding: 20px;
+}
 
+.intro {
   &__text {
+    margin: auto;
+    max-width: 800px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 

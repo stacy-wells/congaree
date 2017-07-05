@@ -1,0 +1,45 @@
+nav {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+
+
+  .nav__wrapper {
+    background-color: gray;
+    height: 25px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    &-content {
+      background-color: gray;
+      left: 50%;
+      margin-left: -40%;
+      position: fixed;
+      width: 80%;
+
+      ul {
+        margin: auto;
+        overflow-x: hidden;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      li {
+        display: inline;
+        text-align: left;
+      }
+
+      a {
+        text-decoration: none;
+
+        &:visited {
+          color: white;
+        }
+      }
+
+      .logo {
+        float: left;
+      }
+    }
+  }
+}
