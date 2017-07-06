@@ -3,7 +3,7 @@
     <% @parks.each do |park| %>
       <div class="index__item">
         <a href="<%= park_path(park) %>">
-          <div class="index__item-photo"><%= image_tag("#{park.name.downcase.gsub(' ', '_')}_square.jpg", alt: "park image", class: "square-image") %></div>
+          <div class="index__item-photo"><%= image_tag("square/#{park.name.downcase.gsub(' ', '_')}_square.jpg", alt: "park image", class: "square-image") %></div>
           <%= park.name %>
         </a>
         <p><%= park.state %></p>

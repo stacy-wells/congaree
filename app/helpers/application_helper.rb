@@ -3,7 +3,7 @@ module ApplicationHelper
     if park.nil?
       "hero.png"
     else
-      "#{park.name.downcase.gsub(' ', '_')}_hero.jpg"
+      "hero/#{park.name.downcase.gsub(' ', '_')}_hero.jpg"
     end
   end
 end

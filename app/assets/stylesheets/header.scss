@@ -1,10 +1,12 @@
 .header {
   &__wrapper {
+    background-color: #000050;
     height: 350px;
+    overflow: hidden;
+    position: relative;
     width: 100%;
 
     .hero-image {
-      background-color: #000050;
       max-width: 1500px;
       position: absolute;
       z-index: -1;

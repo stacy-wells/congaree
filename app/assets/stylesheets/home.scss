@@ -5,6 +5,18 @@
   padding: 20px;
 }
 
+.quote {
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+
+  h2 {
+    font-style: italic;
+  }
+}
+
 .intro {
   &__text {
     margin: auto;
