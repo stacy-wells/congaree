@@ -22,7 +22,12 @@
         </div>
       </nav>
       <div class="header__wrapper">
-        <%= image_tag(hero_image_name(@park), alt: "park image", class: "hero-image") %>
+          <% if @park&.photo || params[:id].nil? %>
+            <%= image_tag(hero_image_name(@park), alt: "park image", class: "hero-image") %>
+          <% else %>
+            <div class="hero-image-mock">
+            </div>
+          <% end %>
         <div class="header__text">
           <% if @park %>
             <h1 class="page-title"><%= @park.name %></h1>
@@ -32,7 +37,6 @@
             <h1 class="page-title">Parks</h1>
             <h1 class="page-title">Report</h1>
           <% end %>
-
           <%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow") %>
         </div>
       </div>

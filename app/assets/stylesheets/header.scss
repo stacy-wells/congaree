@@ -1,6 +1,5 @@
 .header {
   &__wrapper {
-    background-color: #000050;
     height: 350px;
     overflow: hidden;
     position: relative;
@@ -10,10 +9,17 @@
       max-width: 1500px;
       position: absolute;
       z-index: -1;
-
-      img {
-      }
     }
+
+    .hero-image-mock {
+      background-color: #000050;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      z-index: -1;
+    }
+
     .compass-arrow {
       position: absolute;
       left: 226px;
