@@ -2,8 +2,10 @@
   <div class="index__wrapper">
     <% @parks.each do |park| %>
       <div class="index__item">
-        <div class="index__item-photo"></div>
-        <a href="<%= park_path(park) %>"><%= park.name %></a>
+        <a href="<%= park_path(park) %>">
+          <div class="index__item-photo"><%= image_tag("#{park.name.downcase.gsub(' ', '_')}_square.jpg", alt: "park image", class: "square-image") %></div>
+          <%= park.name %>
+        </a>
         <p><%= park.state %></p>
       </div>
     <% end %>
