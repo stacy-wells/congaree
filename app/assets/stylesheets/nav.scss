@@ -30,6 +30,7 @@ nav {
       }
 
       a {
+        color: white;
         text-decoration: none;
 
         &:visited {
@@ -37,8 +38,40 @@ nav {
         }
       }
 
-      .logo {
+      .compass-arrow-logo {
+        width: 20px;
+      }
+
+      .left {
         float: left;
+      }
+    }
+  }
+}
+
+.app__footer {
+  background-color: gray;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 30px;
+  width: 100%;
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+
+    .compass-arrow-logo {
+      margin: auto;
+      width: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:visited {
+        color: white;
       }
     }
   }

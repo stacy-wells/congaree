@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Congaree</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,600" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="app__wrapper">
-    <nav>
-      <div class="nav__wrapper">
-        <div class="nav__wrapper-content">
-          <a class="logo"href="<%= root_path %>">PR<a>
-          <ul>
-            <li><a href="<%= parks_path %>">Parks |</a></li>
-            <li><a href="<%= parks_path %>">About</a></li>
-          </ul>
+  <head>
+    <title>Congaree</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,600" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="app__wrapper">
+      <nav>
+        <div class="nav__wrapper">
+          <div class="nav__wrapper-content">
+            <ul>
+              <li class="left"><a href="<%= root_path %>"><%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow-logo") %>PR</a></li>
+              <li><a href="<%= parks_path %>">Parks |</a></li>
+              <li><a href="<%= parks_path %>">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="header__wrapper">
+        <%= image_tag(hero_image_name(@park), alt: "park image", class: "hero-image") %>
+        <div class="header__text">
+          <% if @park %>
+            <h1 class="page-title"><%= @park.name %></h1>
+            <h3 class="page-subtitle"><%= "#{@park.state}, #{number_with_delimiter(@park.acres, delimiter: ',')} acres" %></h3>
+            <h3 class="page-subtitle-est"><%= "est. #{@park.est.strftime('%Y')}"%></h3>
+          <% else %>
+            <h1 class="page-title">Parks</h1>
+            <h1 class="page-title">Report</h1>
+          <% end %>
+
+          <%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow") %>
         </div>
       </div>
-    </nav>
-    <div class="header__wrapper">
-      <div class="header__text">
-        <% if @park %>
-          <h1 class="page-title"><%= @park.name %></h1>
-          <h3 class="page-subtitle"><%= "#{@park.state}, #{@park.acres} acres" %></h3>
-          <h3 class="page-subtitle-est"><%= "est. #{@park.est.strftime('%Y')}"%></h3>
-        <% else %>
-          <h1 class="page-title">Parks</h1>
-          <h1 class="page-title">Report</h1>
-        <% end %>
-
-        <%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow") %>
+      <main class="app__main">
+        <%= yield %>
+      </main>
+    </div>
+    <div class="app__footer">
+      <div class="app__footer-logo">
+        <a href="<%= root_path %>"><%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow-logo") %>PR</a>
       </div>
     </div>
-    <main class="app__main">
-      <%= yield %>
-    </main>
-  </div>
-
-  <div class="app__footer">
-  </div>
-</body>
-
+  </body>
 </html>

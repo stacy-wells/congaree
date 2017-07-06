@@ -2,7 +2,7 @@
   <div class="card">
     <div class="chart">
       <div class="chart__geo">
-        <%= geo_chart charts_parks_per_state_path, width: "600px", height: "300px", library: {region: 'US', resolution: 'provinces'}, key: ENV['GOOGLE_API_KEY'] %>
+        <%= geo_chart charts_parks_per_state_path, width: "600px", height: "300px", colors: "#355e3b", library: {region: 'US', resolution: 'provinces'}, key: ENV['GOOGLE_API_KEY'] %>
       </div>
     </div>
 
@@ -38,20 +38,24 @@
   <div class="card">
     <div class="chart__group">
       <div class="chart__callout">
-        <h2>9,192,202 <span>ACRES</span></h2>
+        <h2><%= number_with_delimiter(@acres, delimiter: ',') %><span> ACRES</span></h2>
         <h2><span>IN</span> 59 <span>PARKS</span></h2>
       </div>
       <div class="chart__pie">
-        <%= pie_chart charts_acerage_by_park_path, legend: false, donut: true %>
+        <%= pie_chart charts_acerage_by_park_path, legend: false, colors: ["#000050", "#191961", "#323272", "#4c4c84", "#666696", "#7f7fa7", "#9999b9", "#b2b2ca", "#ccccdc", "#e5e5ed"], donut: true, width: "400px", height: "400px;" %>
       </div>
     </div>
+  </div>
 
+  <hr/>
+
+  <div class="card">
     <div class="chart__group">
       <div class="chart__pie">
-        <%= pie_chart charts_visitors_by_park_path, legend: false, donut: true %>
+        <%= pie_chart charts_visitors_by_park_path, legend: false, colors: ["#355e3b", "#496e4e", "#5d7e62", "#718e75", "#859e89", "#9aae9d", "#aebeb0", "#c2cec4", "#d6ded7", "#eaeeeb"], donut: true, width: "400px", height: "400px;" %>
       </div>
       <div class="chart__callout">
-        <h2>99,122,523 <span>VISITORS</span></h2>
+        <h2><%= number_with_delimiter(@visitors, delimiter: ',') %><span> VISITORS</span></h2>
         <h2><span>IN</span> 2016</h2>
       </div>
     </div>

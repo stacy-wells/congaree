@@ -1,10 +1,17 @@
 .header {
   &__wrapper {
-    // background-color: #000050;
-    background-image: url("index_header_two.png");
     height: 350px;
     width: 100%;
 
+    .hero-image {
+      background-color: #000050;
+      max-width: 1500px;
+      position: absolute;
+      z-index: -1;
+
+      img {
+      }
+    }
     .compass-arrow {
       position: absolute;
       left: 226px;

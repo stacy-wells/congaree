@@ -24,3 +24,12 @@
     }
   }
 }
+
+.chart__group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  overflow: hidden;
+}
