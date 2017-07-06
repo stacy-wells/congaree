@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     get "visitors-by-park"
     get "parks-per-state"
   end
+
+  get "about", to: "homes#about"
 end

@@ -1,0 +1,10 @@
+.learn-more-list {
+  a {
+    color: #000050;
+    text-decoration: none;
+
+    &:hover {
+      color: green;
+    }
+  }
+}
