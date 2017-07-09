@@ -8,3 +8,21 @@
     }
   }
 }
+
+.data-source {
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: auto;
+    max-width: 800px;
+  }
+
+  a {
+    color: #000050;
+    text-decoration: none;
+
+    &:hover {
+      color: green;
+    }
+  }
+}

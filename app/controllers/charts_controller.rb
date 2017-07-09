@@ -39,7 +39,15 @@ class ChartsController < ApplicationController
     parks_per_state = {}
 
     Park.all.each do |park|
-      if parks_per_state[park.state]
+      if park.state.include?('&')
+        park.state.split(' & ').each do |state|
+          if parks_per_state[state]
+            parks_per_state[state] += 1
+          else
+            parks_per_state[state] = 1
+          end
+        end
+      elsif parks_per_state[park.state]
         parks_per_state[park.state] += 1
       else
         parks_per_state[park.state] = 1
