@@ -12,6 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ //= require tablet/header
+ //= require mobile/header
  */
- 
-@import 'mobile/header';
