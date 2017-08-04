@@ -1,0 +1,14 @@
+@media (max-width: 668px) {
+  .header {
+    &__wrapper {
+      .compass-arrow {
+        position: absolute;
+        left: 20px;
+      }
+    }
+
+    &__text {
+      padding-left: 94px;
+    }
+  }
+}

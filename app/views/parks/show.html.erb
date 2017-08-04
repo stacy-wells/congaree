@@ -1,7 +1,7 @@
 <div class="park__wrapper card">
   <div class="chart">
     <div class="chart__line">
-      <%= line_chart charts_park_annual_visitors_path(id: @park.id), width: "600px", height: "300px", xtitle: "Year", ytitle: "Total Visitors", library: { baseline: 2000} %>
+      <%= line_chart charts_park_annual_visitors_path(id: @park.id), width:  "#{Chart.width(device_type)}", height: "300px", xtitle: "Year", ytitle: "Total Visitors", library: { baseline: 2000} %>
     </div>
   </div>
 
