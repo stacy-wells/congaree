@@ -16,6 +16,7 @@ gem 'groupdate'
 
 gem 'httparty'
 gem 'dotenv-rails'
+gem 'browser', '~> 1.0.1'
 
 group :development, :test do
   gem 'byebug'

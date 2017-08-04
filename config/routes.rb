@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "homes#home"
+  root "pages#home"
   resources :parks, only: [:index, :show]
 
   namespace :charts do
@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     get "parks-per-state"
   end
 
-  get "about", to: "homes#about"
+  get "about", to: "pages#about"
 end
