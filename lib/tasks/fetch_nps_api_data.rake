@@ -1,13 +1,21 @@
-require 'httparty'
+require 'nps_api_request'
 
 namespace :fetch_nps_api_data do
   desc "Fetches NPS data from the API and saves it to the Parks table"
-  task :get_descriptions => [:environment] do |t, args|
 
+  task :get_and_save_all => [:environment] do
+    data = NpsApiRequest.get_all_park_data
 
-    Park.all.each do |park|
-      response = HTTParty.get("https://developer.nps.gov/api/v0/alerts",
-                              headers: {"Authorization" => ENV["NPS_API_KEY"]})
+    data.each do |park|
+      Park.create!(
+        name: park['name'],
+        park_code: park['park_code'],
+        description: park['description'],
+        lat_long: park['latLong'],
+        states: park['states'],
+        weather_info: park['weatherInfo'],
+        directions_info: park['directionsInfo']
+      )
     end
   end
 end

@@ -179,8 +179,9 @@ parks = [
 ]
 
 parks.each do |park|
-  Park.create!(name: park[:name], state: park[:state],
-               est: Date.new(park[:est]), acres: park[:acres],
-               photo: park[:photo], description: park[:description],
-               weather: park[:weather])
+  p = Park.where(name: park[:name]).first
+  if p
+    p.update(photo: park[:photo])
+    p.save!
+  end
 end

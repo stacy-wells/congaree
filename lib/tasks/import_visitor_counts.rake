@@ -7,7 +7,11 @@ namespace :import_visitor_counts do
       headers = row.headers
       park = Park.find_by(name: row["Park"])
 
-      AnnualVisitorTotal.create!(park_id: park.id, year: Date.new(row["Year"].to_i), visitors: row["Visits"].to_f)
+      AnnualVisitorTotal.create!(
+        park_id: park.id,
+        year: Date.new(row["Year"].to_i),
+        visitors: row["Visits"].to_f
+      )
     end
   end
 end

@@ -32,13 +32,13 @@
         <div class="header__text">
           <% if @park %>
             <h1 class="page-title"><%= @park.name %></h1>
-            <h3 class="page-subtitle"><%= "#{@park.state}, #{number_with_delimiter(@park.acres, delimiter: ',')} acres" %></h3>
-            <h3 class="page-subtitle-est"><%= "est. #{@park.est.strftime('%Y')}"%></h3>
+            <h3 class="page-subtitle"><%= "#{@park.states}, #{number_with_delimiter(@park.acres, delimiter: ',')} acres" %></h3>
+            <h3 class="page-subtitle-est"><%= "est. #{@park.est&.strftime('%Y')}"%></h3>
           <% else %>
             <h1 class="page-title">Parks</h1>
             <h1 class="page-title">Report</h1>
           <% end %>
-          <%= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow") %>
+          <%#= image_tag("compass.png", alt: "compass arrow", class: "compass-arrow") %>
         </div>
       </div>
       <main class="app__main">
